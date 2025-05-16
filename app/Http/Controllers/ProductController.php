@@ -102,7 +102,7 @@ class ProductController extends Controller
  }
  
  $product->update($data);
- return redirect()->back()
+ return redirect()->route('products.index')
  ->withSuccess('Product is updated successfully.');
  } catch (\Exception $e) {
  return redirect()->back()
